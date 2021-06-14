@@ -1,0 +1,152 @@
+body {
+  font-size: 0.875rem;
+}
+
+.container-fluid {
+  min-width: 1200px;
+  max-width: 1600px;
+  height: calc(100vh - 2rem);
+  min-height: 480px;
+}
+
+.card-body {
+  height: calc(100% - 2rem);
+  overflow-y: auto;
+}
+
+.min-count-control {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.min-count-control input {
+  width: 180px;
+}
+
+.min-count-control * + * {
+  margin-left: 0.5rem;
+}
+
+.network {
+  position: relative;
+}
+
+.network svg {
+  display: block;
+}
+
+.network .links {
+  stroke: #999;
+  stroke-opacity: 0.25;
+}
+
+.network .link:hover,
+.network .link.is-active {
+  stroke: #000;
+  stroke-opacity: 1;
+}
+
+.network .node:hover {
+  stroke: #000;
+}
+
+.timeline .empty-container {
+  text-align: center;
+}
+
+.timeline .timeline-header {
+  display: flex;
+}
+
+.timeline .timeline-title {
+  flex: 1;
+  padding-bottom: 25px;
+}
+
+.timeline .timeline-title__name {
+  font-weight: 600;
+}
+
+.timeline .timeline-title:first-child {
+  text-align: right;
+  margin-right: 24px;
+}
+
+.timeline .timeline-title:last-child {
+  margin-left: 24px;
+}
+
+.timeline .timeline-title__type {
+  display: flex;
+  align-items: center;
+}
+
+.timeline .timeline-title__type__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.timeline .timeline-title__type__name {
+  padding: 0 0.5rem;
+}
+
+.timeline .timeline-body {
+  position: relative;
+}
+
+.timeline .timeline-body::before {
+  left: calc(50% - 1px);
+  right: auto;
+  background: rgba(0, 0, 0, 0.12);
+  bottom: 0;
+  content: "";
+  height: calc(100% + 24px);
+  position: absolute;
+  top: -24px;
+  width: 2px;
+}
+
+.timeline .timeline-item {
+  display: flex;
+  padding-bottom: 24px;
+}
+
+.timeline .timeline-item__body {
+  width: calc(50% - 24px);
+}
+
+.timeline .timeline-item__divider {
+  position: relative;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline .timeline-item__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.chart-tooltip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #f0f0f0;
+  font-size: 0.875rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11),
+    0 8px 16px rgba(0, 0, 0, 0.11);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.chart-tooltip.show {
+  opacity: 1;
+}
